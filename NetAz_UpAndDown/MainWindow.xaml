@@ -3,32 +3,41 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:NetAz_UpAndDown"
+        xmlns:local="clr-namespace:NetAz_UpAndDown"        
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="450" Width="800" DataContext="{StaticResource Main}">
+    <Grid Background="LightGreen">
         <Grid.ColumnDefinitions>
+            <ColumnDefinition />
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Viewbox>
-            <TextBlock Text="0" x:Name="TBScreen" />
+            <TextBlock Text="{Binding Value}" Foreground="{Binding Value, Converter={StaticResource Int32ToBrush}}" />            
         </Viewbox>
-        <Grid Grid.Column="1">
+        <Grid Background="White" Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition />
+                <RowDefinition Height="Auto" MinHeight="40" />
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <Button Click="UpButton_Click" x:Name="UpButton">
+            <Button Command="{Binding IncrementCommand}">
                 <Viewbox>
                     <TextBlock Text="+" />
                 </Viewbox>
-            </Button>
-            <Button Grid.Row="1" Click="DownButton_Click" x:Name="DownButton">
+            </Button>            
+            <Button Grid.Row="1" Content="->" Command="{Binding AddCommand}" />
+            <Button Grid.Row="2" Command="{Binding DecrementCommand}" >
                 <Viewbox>
                     <TextBlock Text="-" />
                 </Viewbox>
             </Button>
         </Grid>
+        <GroupBox Grid.Column="2" Header="{Binding Items.Count}">
+            <ItemsControl ItemsSource="{Binding Items}"><!-- ListBox, ComboBox, DataGrid -->
+            
+            </ItemsControl>
+        </GroupBox>
+        
     </Grid>
 </Window>

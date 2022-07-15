@@ -20,47 +20,9 @@ namespace NetAz_UpAndDown
     /// </summary>
     public partial class MainWindow : Window
     {
-        public int Value { get; set; }
-
         public MainWindow()
         {
             InitializeComponent();
-            Value = 5;
-            TBScreen.Text = Value.ToString();
-        }
-
-        private void UpButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (Value < 9)
-            {
-                Value++;
-                TBScreen.Text = Value.ToString();
-            }
-
-            if(Value == 9)
-            {
-                UpButton.IsEnabled = false;
-            }
-
-            if (Value > 0)
-                DownButton.IsEnabled = true;
-        }
-
-        private void DownButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (Value > 0)
-            {
-                Value--;
-                TBScreen.Text = Value.ToString();
-            }
-
-            if (Value == 0)
-            {
-                DownButton.IsEnabled = false;
-            }
-
-            if (Value < 9)
-                UpButton.IsEnabled = true;
         }
     }
 }

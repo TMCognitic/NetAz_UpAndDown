@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetAz_UpAndDown", "NetAz_UpAndDown\NetAz_UpAndDown.csproj", "{A0CAE45C-325A-463E-94A0-1748EAD32554}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetAz_UpAndDown.ViewModels", "NetAz_UpAndDown.ViewModels\NetAz_UpAndDown.ViewModels.csproj", "{078622C1-4AD7-4BF7-8BBC-DAEA8202486B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A0CAE45C-325A-463E-94A0-1748EAD32554}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0CAE45C-325A-463E-94A0-1748EAD32554}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0CAE45C-325A-463E-94A0-1748EAD32554}.Release|Any CPU.Build.0 = Release|Any CPU
+		{078622C1-4AD7-4BF7-8BBC-DAEA8202486B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{078622C1-4AD7-4BF7-8BBC-DAEA8202486B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{078622C1-4AD7-4BF7-8BBC-DAEA8202486B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{078622C1-4AD7-4BF7-8BBC-DAEA8202486B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

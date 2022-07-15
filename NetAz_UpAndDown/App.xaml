@@ -2,8 +2,12 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:NetAz_UpAndDown"
+             xmlns:vm="clr-namespace:NetAz_UpAndDown.ViewModels;assembly=NetAz_UpAndDown.ViewModels"
+             xmlns:conv="clr-namespace:NetAz_UpAndDown.Converters"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <vm:MainViewModel x:Key="Main" />
+        <conv:Int32ToBrushConverter x:Key="Int32ToBrush" />
+        <conv:BoolToVisibilityConverter x:Key="BoolToVisibility" />
     </Application.Resources>
 </Application>
